@@ -42,6 +42,7 @@
             <a class="btn btn-primary" href="#contact">Request a Service</a>
             <a class="btn btn-secondary" href="#services">See Our Services</a>
           </div>
+          <p class="hero-note">We’ll text back to confirm time and price. Parent-supervised as appropriate.</p>
           <div class="trust-row">
             <div><strong>Local</strong><span>Neighborhood service</span></div>
             <div><strong>Simple</strong><span>Easy scheduling</span></div>
@@ -71,7 +72,7 @@
       </div>
     </section>
 
-  <section id="services" class="services-section">
+  <section id="services" class="section services-section">
   <div class="container">
 
     <div class="section-heading">
@@ -122,7 +123,7 @@
           </div>
         </div>
 
-        <a href="#request-service" class="service-link">Request a Car Wash →</a>
+        <a href="#contact" class="service-link" data-service="Car Washing">Request a Car Wash →</a>
       </article>
 
 
@@ -159,7 +160,7 @@
           </div>
         </div>
 
-        <a href="#request-service" class="service-link">Request a Golf Cart Wash →</a>
+        <a href="#contact" class="service-link" data-service="Golf Cart Washing">Request a Golf Cart Wash →</a>
       </article>
 
 
@@ -201,7 +202,7 @@
           </div>
         </div>
 
-        <a href="#request-service" class="service-link">Request Trash Can Service →</a>
+        <a href="#contact" class="service-link" data-service="Trash Can">Request Trash Can Service →</a>
       </article>
 
 
@@ -228,7 +229,7 @@
           </p>
         </div>
 
-        <a href="#request-service" class="service-link">Request a Power Washing Quote →</a>
+        <a href="#contact" class="service-link" data-service="Power Washing">Request a Power Washing Quote →</a>
       </article>
 
     </div>
@@ -249,7 +250,7 @@
         <strong>$25</strong>
       </div>
 
-      <a href="#request-service" class="btn btn-primary">
+      <a href="#contact" class="btn btn-primary" data-service="Driveway Special">
         Request the Driveway Special
       </a>
     </div>
@@ -311,7 +312,7 @@
     </section>
 
     <section class="section contact" id="contact">
-      <div class="container contact-grid">
+      <div class="container contact-grid" id="request-service">
         <div class="contact-copy">
           <span class="eyebrow light">REQUEST SERVICE</span>
           <h2>Need a hand around the neighborhood?</h2>
@@ -323,6 +324,9 @@
         </div>
 
         <form class="contact-form" action="https://formspree.io/f/xeajkzyv" method="POST">
+          <input type="hidden" name="_next" value="https://flemingbros.com/thanks.html">
+          <input type="hidden" name="_subject" value="Fleming Bros service request">
+          <input type="hidden" name="subject" value="Fleming Bros service request">
           <div class="field-row">
             <label>
               Your Name
@@ -335,24 +339,26 @@
           </div>
           <label>
             Service Needed
-            <select name="service" required>
+            <select name="service" id="service" required>
               <option value="" selected disabled>Select a service</option>
               <option>Car Washing</option>
               <option>Golf Cart Washing</option>
               <option>Trash Can - Bring Up From Street</option>
-              <option>Trash Can - Cleaning</option>
-              <option>Trash Can - Recurring Service</option>
+              <option>Trash Can - Cleanout</option>
+              <option>Trash Can - Monthly Bring-Up Plan</option>
+              <option>Trash Can - Bring-Up + Cleanout</option>
               <option>Power Washing</option>
+              <option>Driveway Special</option>
               <option>Other / Multiple Services</option>
             </select>
           </label>
           <label>
             Address / Neighborhood
-            <input type="text" name="location" placeholder="Street or neighborhood">
+            <input type="text" name="location" placeholder="Street or neighborhood" required>
           </label>
           <label>
-            Job Details
-            <textarea name="details" rows="5" placeholder="Tell us what you need, how many cars/cans, or describe the power washing job."></textarea>
+            Job Details <span class="field-hint" id="details-hint">(optional)</span>
+            <textarea name="details" id="details" rows="5" placeholder="Tell us what you need, how many cars/cans, or describe the power washing job."></textarea>
           </label>
           <button class="btn btn-form" type="submit">Send Service Request</button>
           <p class="form-disclaimer">Submitting this form is a request only. We’ll confirm availability and pricing before scheduling.</p>

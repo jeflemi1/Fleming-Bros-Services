@@ -466,12 +466,22 @@ button, input, select, textarea { font: inherit; }
 .price-row {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   gap: 20px;
   padding: 12px 0;
   border-bottom: 1px solid #e5e7eb;
 }
 
 .price-row span { color: #374151; }
+
+.price-subline {
+  display: block;
+  margin-top: 3px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--muted);
+  line-height: 1.35;
+}
 
 .price-row strong {
   color: #123047;

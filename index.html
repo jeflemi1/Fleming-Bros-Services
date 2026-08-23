@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Fleming Bros Neighborhood Services offers car washing, golf cart washing, trash can service and light power washing for local neighbors." />
+  <meta name="description" content="Fleming Bros Neighborhood Services — car washing, golf cart washing, trash cans, and light power washing in Cedar Point and nearby neighborhoods." />
   <title>Fleming Bros Neighborhood Services</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
+
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="#top" aria-label="Fleming Bros Neighborhood Services home">
@@ -29,20 +31,21 @@
     </div>
   </header>
 
-  <main id="top">
-    <section class="hero">
+  <main id="main">
+    <section class="hero" id="top">
       <div class="hero-shape hero-shape-one"></div>
       <div class="hero-shape hero-shape-two"></div>
       <div class="container hero-grid">
         <div class="hero-copy">
           <span class="eyebrow">LOCAL • RELIABLE • HARDWORKING</span>
           <h1>Neighborhood jobs.<br><span>Done right.</span></h1>
-          <p>From washing cars and golf carts to taking care of trash cans, Fleming Bros Neighborhood Services makes it easier to keep things clean and taken care of.</p>
+          <p>Car washes, golf carts, trash cans, and small power-washing jobs — two brothers, right here in the neighborhood.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">Request a Service</a>
-            <a class="btn btn-secondary" href="#services">See Our Services</a>
+            <a class="btn btn-primary" href="#contact">Request a job</a>
+            <a class="btn btn-secondary" href="#services">See prices</a>
           </div>
-          <p class="hero-note">We’ll text back to confirm time and price. Parent-supervised as appropriate.</p>
+          <p class="hero-helper">We’ll text back to confirm time and price. Parent-supervised as appropriate.</p>
+          <p class="service-area">Serving Cedar Point and surrounding neighborhoods — Governor’s Point, Eclipse, and nearby.</p>
           <div class="trust-row">
             <div><strong>Local</strong><span>Neighborhood service</span></div>
             <div><strong>Simple</strong><span>Easy scheduling</span></div>
@@ -72,197 +75,94 @@
       </div>
     </section>
 
-  <section id="services" class="section services-section">
-  <div class="container">
-
-    <div class="section-heading">
-      <span class="eyebrow">Our Services</span>
-      <h2>Simple neighborhood services at straightforward prices.</h2>
-      <p>
-        Convenient, reliable help for keeping your vehicles and property looking clean.
-      </p>
-    </div>
-
-    <div class="services-grid">
-
-      <!-- CAR WASHING -->
-      <article class="service-card">
-        <div class="service-icon">🚗</div>
-
-        <div class="service-card-header">
-          <h3>Car Washing</h3>
-          <div class="service-starting-price">
-            <span>Starting at</span>
-            <strong>$20</strong>
-          </div>
+    <section id="services" class="services-section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Our Services</span>
+          <h2>Simple neighborhood services at straightforward prices.</h2>
+          <p>Convenient, reliable help for keeping your vehicles and property looking clean.</p>
         </div>
 
-        <p class="service-description">
-          Convenient hand washing right at your home.
-        </p>
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon">🚗</div>
+            <div class="service-card-header">
+              <h3>Car Washing</h3>
+              <div class="service-starting-price"><span>Starting at</span><strong>$20</strong></div>
+            </div>
+            <p class="service-description">Convenient hand washing right at your home.</p>
+            <div class="price-list">
+              <div class="price-row"><span>Exterior Wash</span><strong>$20</strong></div>
+              <div class="price-row"><span>Wash + Vacuum</span><strong>$30</strong></div>
+              <div class="price-row"><span>Full Clean</span><strong>$40</strong></div>
+              <div class="price-row price-extra"><span>Large Truck / 3-Row SUV</span><strong>+$5</strong></div>
+            </div>
+            <a href="#contact" class="service-link" data-service="Car Washing">Request a Car Wash →</a>
+          </article>
 
-        <div class="price-list">
-          <div class="price-row">
-            <span>Exterior Wash</span>
-            <strong>$20</strong>
-          </div>
+          <article class="service-card">
+            <div class="service-icon">⛳</div>
+            <div class="service-card-header">
+              <h3>Golf Cart Washing</h3>
+              <div class="service-starting-price"><span>Starting at</span><strong>$10</strong></div>
+            </div>
+            <p class="service-description">Keep your golf cart clean without having to do it yourself.</p>
+            <div class="price-list">
+              <div class="price-row"><span>Basic Wash</span><strong>$10</strong></div>
+              <div class="price-row"><span>Full Cart Clean</span><strong>$15</strong></div>
+              <div class="price-row price-extra"><span>6-Seater / Lifted Cart</span><strong>+$5</strong></div>
+            </div>
+            <a href="#contact" class="service-link" data-service="Golf Cart Washing">Request a Golf Cart Wash →</a>
+          </article>
 
-          <div class="price-row">
-            <span>Wash + Vacuum</span>
-            <strong>$30</strong>
-          </div>
+          <article class="service-card">
+            <div class="service-icon">🗑️</div>
+            <div class="service-card-header">
+              <h3>Trash Can Services</h3>
+              <div class="service-starting-price"><span>Starting at</span><strong>$5</strong></div>
+            </div>
+            <p class="service-description">We can bring your cans back from the street and help keep them clean.</p>
+            <div class="price-list">
+              <div class="price-row"><span>Bring Can Up From Street</span><strong>$5</strong></div>
+              <div class="price-row"><span>Monthly Bring-Up Plan</span><strong>$10/mo</strong></div>
+              <div class="price-row"><span>Trash Can Cleanout</span><strong>$10/can</strong></div>
+              <div class="price-row"><span>Bring-Up + Cleanout</span><strong>$15/can</strong></div>
+            </div>
+            <a href="#contact" class="service-link" data-service="Trash Can - Bring Up From Street">Request Trash Can Service →</a>
+          </article>
 
-          <div class="price-row">
-            <span>Full Clean</span>
-            <strong>$40</strong>
-          </div>
-
-          <div class="price-row price-extra">
-            <span>Large Truck / 3-Row SUV</span>
-            <strong>+$5</strong>
-          </div>
+          <article class="service-card">
+            <div class="service-icon">💦</div>
+            <div class="service-card-header">
+              <h3>Power Washing</h3>
+              <div class="service-starting-price quote-price"><span>Pricing</span><strong>By Quote</strong></div>
+            </div>
+            <p class="service-description">Power washing for driveways, patios, walkways, outdoor surfaces and other small jobs.</p>
+            <div class="quote-box">
+              <strong>Job-Specific Pricing</strong>
+              <p>Pricing depends on the size, condition and type of surface.</p>
+            </div>
+            <a href="#contact" class="service-link" data-service="Power Washing">Request a Power Washing Quote →</a>
+          </article>
         </div>
 
-        <a href="#contact" class="service-link" data-service="Car Washing">Request a Car Wash →</a>
-      </article>
-
-
-      <!-- GOLF CART WASHING -->
-      <article class="service-card">
-        <div class="service-icon">⛳</div>
-
-        <div class="service-card-header">
-          <h3>Golf Cart Washing</h3>
-          <div class="service-starting-price">
-            <span>Starting at</span>
-            <strong>$10</strong>
+        <div class="bundle-card">
+          <div class="bundle-copy">
+            <span class="bundle-label">Neighborhood Special</span>
+            <h3>The Driveway Special</h3>
+            <p>Get a basic car wash and basic golf cart wash during the same visit.</p>
           </div>
+          <div class="bundle-price">
+            <span>Bundle Price</span>
+            <strong>$25</strong>
+          </div>
+          <a href="#contact" class="btn btn-accent" data-service="Driveway Special">Request the Driveway Special</a>
         </div>
 
-        <p class="service-description">
-          Keep your golf cart clean without having to do it yourself.
-        </p>
-
-        <div class="price-list">
-          <div class="price-row">
-            <span>Basic Wash</span>
-            <strong>$10</strong>
-          </div>
-
-          <div class="price-row">
-            <span>Full Cart Clean</span>
-            <strong>$15</strong>
-          </div>
-
-          <div class="price-row price-extra">
-            <span>6-Seater / Lifted Cart</span>
-            <strong>+$5</strong>
-          </div>
-        </div>
-
-        <a href="#contact" class="service-link" data-service="Golf Cart Washing">Request a Golf Cart Wash →</a>
-      </article>
-
-
-      <!-- TRASH CAN SERVICES -->
-      <article class="service-card">
-        <div class="service-icon">🗑️</div>
-
-        <div class="service-card-header">
-          <h3>Trash Can Services</h3>
-          <div class="service-starting-price">
-            <span>Starting at</span>
-            <strong>$5</strong>
-          </div>
-        </div>
-
-        <p class="service-description">
-          We can bring your cans back from the street and help keep them clean.
-        </p>
-
-        <div class="price-list">
-          <div class="price-row">
-            <span>Bring Can Up From Street</span>
-            <strong>$5</strong>
-          </div>
-
-          <div class="price-row">
-            <span>Monthly Bring-Up Plan</span>
-            <strong>$10/mo</strong>
-          </div>
-
-          <div class="price-row">
-            <span>Trash Can Cleanout</span>
-            <strong>$10/can</strong>
-          </div>
-
-          <div class="price-row">
-            <span>Bring-Up + Cleanout</span>
-            <strong>$15/can</strong>
-          </div>
-        </div>
-
-        <a href="#contact" class="service-link" data-service="Trash Can">Request Trash Can Service →</a>
-      </article>
-
-
-      <!-- POWER WASHING -->
-      <article class="service-card">
-        <div class="service-icon">💦</div>
-
-        <div class="service-card-header">
-          <h3>Power Washing</h3>
-          <div class="service-starting-price quote-price">
-            <span>Pricing</span>
-            <strong>By Quote</strong>
-          </div>
-        </div>
-
-        <p class="service-description">
-          Power washing for driveways, patios, walkways, outdoor surfaces and other small jobs.
-        </p>
-
-        <div class="quote-box">
-          <strong>Job-Specific Pricing</strong>
-          <p>
-            Pricing depends on the size, condition and type of surface.
-          </p>
-        </div>
-
-        <a href="#contact" class="service-link" data-service="Power Washing">Request a Power Washing Quote →</a>
-      </article>
-
-    </div>
-
-
-    <!-- FEATURED BUNDLE -->
-    <div class="bundle-card">
-      <div class="bundle-copy">
-        <span class="bundle-label">Neighborhood Special</span>
-        <h3>The Driveway Special</h3>
-        <p>
-          Get a basic car wash and basic golf cart wash during the same visit.
-        </p>
+        <p class="pricing-note">Prices are for normal cleaning conditions. Excessive mud, pet hair, heavy staining or unusually dirty vehicles may require an additional charge.</p>
       </div>
+    </section>
 
-      <div class="bundle-price">
-        <span>Bundle Price</span>
-        <strong>$25</strong>
-      </div>
-
-      <a href="#contact" class="btn btn-primary" data-service="Driveway Special">
-        Request the Driveway Special
-      </a>
-    </div>
-
-
-    <p class="pricing-note">
-      Prices are for normal cleaning conditions. Excessive mud, pet hair,
-      heavy staining or unusually dirty vehicles may require an additional charge.
-    </p>
-
-  </div>
-</section>
     <section class="section how" id="how-it-works">
       <div class="container">
         <div class="section-heading centered">
@@ -270,33 +170,21 @@
           <h2>How it works</h2>
         </div>
         <div class="steps">
-          <div class="step">
-            <span>1</span>
-            <h3>Pick a service</h3>
-            <p>Tell us what you need and where the job is located.</p>
-          </div>
-          <div class="step-arrow">→</div>
-          <div class="step">
-            <span>2</span>
-            <h3>We confirm</h3>
-            <p>We’ll confirm pricing and find a time that works.</p>
-          </div>
-          <div class="step-arrow">→</div>
-          <div class="step">
-            <span>3</span>
-            <h3>We get it done</h3>
-            <p>Friendly neighborhood service without the hassle.</p>
-          </div>
+          <div class="step"><span>1</span><h3>Pick a service</h3><p>Tell us what you need and where the job is located.</p></div>
+          <div class="step-arrow" aria-hidden="true">→</div>
+          <div class="step"><span>2</span><h3>We confirm</h3><p>We’ll text back to confirm pricing and find a time that works.</p></div>
+          <div class="step-arrow" aria-hidden="true">→</div>
+          <div class="step"><span>3</span><h3>We get it done</h3><p>Friendly neighborhood service without the hassle.</p></div>
         </div>
       </div>
     </section>
 
     <section class="section about" id="about">
       <div class="container about-grid">
-        <div class="about-badge">
-          <div class="big-initials">FB</div>
-          <p>Fleming Bros<br>Neighborhood Services</p>
-        </div>
+        <figure class="about-photo">
+          <div class="about-photo-frame"><span class="about-photo-label">Photo: the brothers</span></div>
+          <figcaption>A real photo of the brothers goes here.</figcaption>
+        </figure>
         <div class="about-copy">
           <span class="eyebrow">ABOUT US</span>
           <h2>Two brothers. One neighborhood. Ready to work.</h2>
@@ -316,49 +204,38 @@
         <div class="contact-copy">
           <span class="eyebrow light">REQUEST SERVICE</span>
           <h2>Need a hand around the neighborhood?</h2>
-          <p>Send us the details below. We’ll follow up to confirm the job, pricing and availability.</p>
+          <p>Send us the details below. We’ll follow up by text to confirm the job, pricing and availability.</p>
           <div class="contact-note">
             <strong>Power washing?</strong>
             <span>Please include a short description of the area you want cleaned so we can provide job-specific pricing.</span>
           </div>
         </div>
 
-        <form class="contact-form" action="https://formspree.io/f/xeajkzyv" method="POST">
+        <form class="contact-form" id="job-form" action="https://formspree.io/f/xeajkzyv" method="POST">
           <input type="hidden" name="_next" value="https://flemingbros.com/thanks.html">
           <input type="hidden" name="_subject" value="Fleming Bros service request">
-          <input type="hidden" name="subject" value="Fleming Bros service request">
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
           <div class="field-row">
-            <label>
-              Your Name
-              <input type="text" name="name" placeholder="Name" required>
-            </label>
-            <label>
-              Phone Number
-              <input type="tel" name="phone" placeholder="(757) 555-1234" required>
-            </label>
+            <label>Name<input type="text" name="name" autocomplete="name" placeholder="Your name" required></label>
+            <label>Your phone<input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="So we can text you back" required></label>
           </div>
-          <label>
-            Service Needed
+          <label>Service
             <select name="service" id="service" required>
               <option value="" selected disabled>Select a service</option>
-              <option>Car Washing</option>
-              <option>Golf Cart Washing</option>
-              <option>Trash Can - Bring Up From Street</option>
-              <option>Trash Can - Cleanout</option>
-              <option>Trash Can - Monthly Bring-Up Plan</option>
-              <option>Trash Can - Bring-Up + Cleanout</option>
-              <option>Power Washing</option>
-              <option>Driveway Special</option>
-              <option>Other / Multiple Services</option>
+              <option value="Driveway Special">Driveway Special</option>
+              <option value="Car Washing">Car Washing</option>
+              <option value="Golf Cart Washing">Golf Cart Washing</option>
+              <option value="Trash Can - Bring Up From Street">Trash Can - Bring Up From Street</option>
+              <option value="Trash Can - Cleaning">Trash Can - Cleaning</option>
+              <option value="Trash Can - Recurring Service">Trash Can - Recurring Service</option>
+              <option value="Trash Can - Bring-Up + Cleanout">Trash Can - Bring-Up + Cleanout</option>
+              <option value="Power Washing">Power Washing</option>
+              <option value="Other / Multiple Services">Other / Multiple Services</option>
             </select>
           </label>
-          <label>
-            Address / Neighborhood
-            <input type="text" name="location" placeholder="Street or neighborhood" required>
-          </label>
-          <label>
-            Job Details <span class="field-hint" id="details-hint">(optional)</span>
-            <textarea name="details" id="details" rows="5" placeholder="Tell us what you need, how many cars/cans, or describe the power washing job."></textarea>
+          <label>Address<input type="text" name="address" autocomplete="street-address" placeholder="Cedar Point, Governor’s Point, Eclipse…" required></label>
+          <label class="details-field" id="details-field" hidden>Job details <em>(required for power washing)</em>
+            <textarea name="details" id="details" rows="5" placeholder="Tell us the surface, size, and anything we should know."></textarea>
           </label>
           <button class="btn btn-form" type="submit">Send Service Request</button>
           <p class="form-disclaimer">Submitting this form is a request only. We’ll confirm availability and pricing before scheduling.</p>
@@ -371,6 +248,7 @@
     <div class="container footer-wrap">
       <div>
         <strong>Fleming Bros Neighborhood Services</strong>
+        <span>Serving Cedar Point &amp; nearby</span>
         <span>Local help. Hard work. Great service.</span>
       </div>
       <p>© <span id="year"></span> Fleming Bros Neighborhood Services</p>

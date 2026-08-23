@@ -1,53 +1,33 @@
-const yearEl = document.getElementById('year');
-if (yearEl) yearEl.textContent = new Date().getFullYear();
+(function () {
+  const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-const serviceSelect = document.getElementById('service');
-const detailsField = document.getElementById('details');
-const detailsHint = document.getElementById('details-hint');
+  const service = document.getElementById("service");
+  const detailsField = document.getElementById("details-field");
+  const details = document.getElementById("details");
 
-function selectedServiceText() {
-  if (!serviceSelect || serviceSelect.selectedIndex < 0) return '';
-  return serviceSelect.options[serviceSelect.selectedIndex].text;
-}
-
-function isPowerWashing() {
-  return selectedServiceText() === 'Power Washing';
-}
-
-function syncDetailsRequirement() {
-  if (!detailsField) return;
-  const required = isPowerWashing();
-  detailsField.required = required;
-  detailsField.setAttribute('aria-required', required ? 'true' : 'false');
-  if (detailsHint) {
-    detailsHint.textContent = required ? '(required for power washing)' : '(optional)';
+  function syncDetails() {
+    if (!service || !detailsField || !details) return;
+    const power = service.value === "Power Washing";
+    detailsField.hidden = !power;
+    details.required = power;
+    if (!power) details.value = "";
   }
-}
 
-function selectService(serviceName) {
-  if (!serviceSelect || !serviceName) return false;
-  const needle = serviceName.trim().toLowerCase();
-  const options = Array.from(serviceSelect.options);
-  const match =
-    options.find((option) => option.text.toLowerCase() === needle) ||
-    options.find((option) => option.value.toLowerCase() === needle) ||
-    options.find((option) => option.text.toLowerCase().startsWith(needle));
-  if (!match || !match.value) return false;
-  serviceSelect.value = match.value;
-  syncDetailsRequirement();
-  return true;
-}
+  if (service) {
+    service.addEventListener("change", syncDetails);
+    syncDetails();
+  }
 
-document.querySelectorAll('[data-service]').forEach((link) => {
-  link.addEventListener('click', () => {
-    selectService(link.getAttribute('data-service'));
+  document.querySelectorAll("[data-service]").forEach((link) => {
+    link.addEventListener("click", () => {
+      const value = link.getAttribute("data-service");
+      if (!value || !service) return;
+      const option = Array.from(service.options).find((o) => o.value === value);
+      if (option) {
+        service.value = value;
+        syncDetails();
+      }
+    });
   });
-});
-
-if (serviceSelect) {
-  serviceSelect.addEventListener('change', syncDetailsRequirement);
-}
-
-const params = new URLSearchParams(window.location.search);
-selectService(params.get('service'));
-syncDetailsRequirement();
+})();

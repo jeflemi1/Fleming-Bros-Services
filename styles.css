@@ -776,6 +776,18 @@ button, input, select, textarea { font: inherit; }
   box-shadow: 0 0 0 3px rgba(47, 128, 237, 0.12);
 }
 
+.form-hours-notice {
+  margin: 4px 0 16px;
+  padding: 14px 16px 14px 18px;
+  background: var(--lime);
+  color: #102d3f;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.45;
+  border-radius: 12px;
+  border-left: 5px solid #102d3f;
+}
+
 .btn-form {
   width: 100%;
   background: var(--blue);
